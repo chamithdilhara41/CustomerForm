@@ -24,8 +24,12 @@ public class mainFormController {
     }
 
     @FXML
-    void btnCustomerOnAction(ActionEvent event) {
+    void btnCustomerOnAction(ActionEvent event) throws IOException {
+        AnchorPane dashboarPane = FXMLLoader.load(this.getClass().getResource("/view/customer_form.fxml"));
 
+
+        centerNode.getChildren().clear();
+        centerNode.getChildren().add(dashboarPane);
     }
 
     @FXML
