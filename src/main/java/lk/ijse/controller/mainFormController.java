@@ -25,25 +25,28 @@ public class mainFormController {
 
     @FXML
     void btnCustomerOnAction(ActionEvent event) throws IOException {
-        AnchorPane dashboarPane = FXMLLoader.load(this.getClass().getResource("/view/customer_form.fxml"));
+        AnchorPane customerPane = FXMLLoader.load(this.getClass().getResource("/view/customer_form.fxml"));
 
 
         centerNode.getChildren().clear();
-        centerNode.getChildren().add(dashboarPane);
+        centerNode.getChildren().add(customerPane);
     }
 
     @FXML
-    void btnDashboardOnAction(ActionEvent event) {
+    void btnDashboardOnAction(ActionEvent event) throws IOException {
+        AnchorPane dashboardPane = FXMLLoader.load(this.getClass().getResource("/view/dashboard_form.fxml"));
 
+        centerNode.getChildren().clear();
+        centerNode.getChildren().add(dashboardPane);
     }
 
     @FXML
     void btnItemOnAction(ActionEvent event) throws IOException {
-        AnchorPane dashboarPane = FXMLLoader.load(this.getClass().getResource("/view/item_form.fxml"));
+        AnchorPane itemPane = FXMLLoader.load(this.getClass().getResource("/view/item_form.fxml"));
 
 
         centerNode.getChildren().clear();
-        centerNode.getChildren().add(dashboarPane);
+        centerNode.getChildren().add(itemPane);
     }
 
     @FXML
